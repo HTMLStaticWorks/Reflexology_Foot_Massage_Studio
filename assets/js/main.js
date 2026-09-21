@@ -38,8 +38,9 @@
 
   setTheme(getPreferredTheme());
 
-  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-  if (themeToggleDrawer) themeToggleDrawer.addEventListener('click', toggleTheme);
+  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+    btn.addEventListener('click', toggleTheme);
+  });
 
   /* ── RTL Management ──────────────────────────────────────── */
   function getPreferredDir() {
@@ -63,8 +64,9 @@
 
   setDir(getPreferredDir());
 
-  if (rtlToggle) rtlToggle.addEventListener('click', toggleDir);
-  if (rtlToggleDrawer) rtlToggleDrawer.addEventListener('click', toggleDir);
+  document.querySelectorAll('.rtl-toggle').forEach(function (btn) {
+    btn.addEventListener('click', toggleDir);
+  });
 
   /* ── Navbar Scroll Effect ────────────────────────────────── */
   function handleScroll() {
@@ -84,17 +86,34 @@
     if (!mobileDrawer) return;
     mobileDrawer.classList.add('open');
     body.style.overflow = 'hidden';
-    if (hamburger) hamburger.classList.add('active');
+    if (hamburger) {
+      hamburger.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Close menu');
+    }
   }
 
   function closeDrawer() {
     if (!mobileDrawer) return;
     mobileDrawer.classList.remove('open');
     body.style.overflow = '';
-    if (hamburger) hamburger.classList.remove('active');
+    if (hamburger) {
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
+    }
   }
 
-  if (hamburger) hamburger.addEventListener('click', openDrawer);
+  function toggleDrawer() {
+    if (!mobileDrawer) return;
+    if (mobileDrawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }
+
+  if (hamburger) hamburger.addEventListener('click', toggleDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
   if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
 
@@ -266,36 +285,56 @@
   /* ── Pressure Point Map (Interactive) ────────────────────── */
   function initPressureMap() {
     const points = document.querySelectorAll('.pressure-point');
+    const pills = document.querySelectorAll('.point-pill');
     const infoPanels = document.querySelectorAll('.pressure-info');
-    if (!points.length) return;
+    if (!points.length && !pills.length) return;
 
+    function activateZone(targetId) {
+      if (!targetId) return;
+
+      // Synchronize map hotspots
+      points.forEach(function (p) {
+        const isMatch = p.getAttribute('data-target') === targetId;
+        p.classList.toggle('active', isMatch);
+        p.setAttribute('aria-expanded', isMatch ? 'true' : 'false');
+      });
+
+      // Synchronize navigation pills
+      pills.forEach(function (pill) {
+        const isMatch = pill.getAttribute('data-target') === targetId;
+        pill.classList.toggle('active', isMatch);
+        pill.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+      });
+
+      // Switch active panel
+      infoPanels.forEach(function (info) {
+        const isMatch = info.id === targetId;
+        info.classList.toggle('active', isMatch);
+      });
+    }
+
+    // Map point listeners
     points.forEach(function (point) {
       point.addEventListener('click', function () {
-        const target = point.getAttribute('data-target');
-
-        points.forEach(function (p) { p.classList.remove('active'); });
-        infoPanels.forEach(function (info) { info.classList.remove('active'); });
-
-        point.classList.add('active');
-        const targetInfo = document.getElementById(target);
-        if (targetInfo) targetInfo.classList.add('active');
+        activateZone(point.getAttribute('data-target'));
       });
 
       point.addEventListener('mouseenter', function () {
-        const target = point.getAttribute('data-target');
-        points.forEach(function (p) { p.classList.remove('active'); });
-        infoPanels.forEach(function (info) { info.classList.remove('active'); });
-        point.classList.add('active');
-        const targetInfo = document.getElementById(target);
-        if (targetInfo) targetInfo.classList.add('active');
+        activateZone(point.getAttribute('data-target'));
       });
     });
 
-    // Default: activate first
-    if (points[0]) {
-      points[0].classList.add('active');
-      const firstTarget = document.getElementById(points[0].getAttribute('data-target'));
-      if (firstTarget) firstTarget.classList.add('active');
+    // Pill tab listeners
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        activateZone(pill.getAttribute('data-target'));
+      });
+    });
+
+    // Default: activate first point or pill
+    const initialTarget = points[0]?.getAttribute('data-target') || pills[0]?.getAttribute('data-target');
+    if (initialTarget) {
+      activateZone(initialTarget);
     }
   }
 
@@ -502,6 +541,39 @@
   }
 
   initComingSoonForm();
+
+  /* ── Back to Top Button ──────────────────────────────────── */
+  function initBackToTop() {
+    let backToTopBtn = document.getElementById('backToTop');
+    if (!backToTopBtn) {
+      backToTopBtn = document.createElement('button');
+      backToTopBtn.id = 'backToTop';
+      backToTopBtn.className = 'back-to-top';
+      backToTopBtn.setAttribute('aria-label', 'Back to top');
+      backToTopBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>';
+      document.body.appendChild(backToTopBtn);
+    }
+
+    function toggleBackToTop() {
+      if (window.scrollY > 350) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
+    backToTopBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  initBackToTop();
 
   /* ── Lucide Icons Init ───────────────────────────────────── */
   if (typeof lucide !== 'undefined') {

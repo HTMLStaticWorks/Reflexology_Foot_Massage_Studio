@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sole Harmony — Discover Natural Healing</title>
   <meta name="description" content="Explore our reflexology treatments and interactive pressure point guide. Sole Harmony offers personalized wellness experiences rooted in ancient healing traditions.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#5B7153">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
@@ -24,7 +32,7 @@
         <li><a href="home2.html" class="nav-link active">Home 2</a></li>
         <li><a href="about.html" class="nav-link">About Us</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="services.html#treatments" class="nav-link">Treatments</a></li>
+        <li><a href="treatments.html" class="nav-link">Treatments</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -41,19 +49,20 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-overlay" id="drawerOverlay"></div>
     <div class="drawer-content">
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
       <ul class="drawer-menu">
         <li><a href="index.html" class="drawer-link">Home</a></li>
         <li><a href="home2.html" class="drawer-link active">Home 2</a></li>
         <li><a href="about.html" class="drawer-link">About Us</a></li>
         <li><a href="services.html" class="drawer-link">Services</a></li>
-        <li><a href="services.html#treatments" class="drawer-link">Treatments</a></li>
+        <li><a href="treatments.html" class="drawer-link">Treatments</a></li>
         <li><a href="blog.html" class="drawer-link">Blog</a></li>
         <li><a href="contact.html" class="drawer-link">Contact</a></li>
       </ul>
       <div class="drawer-actions">
-        <button class="rtl-toggle" id="rtlToggleDrawer" aria-label="Toggle text direction"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg><span>Toggle RTL</span></button>
-        <button class="theme-toggle" id="themeToggleDrawer" aria-label="Toggle theme"><svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span class="theme-label">Toggle Theme</span></button>
+        <div class="drawer-toggles">
+          <button class="rtl-toggle" id="rtlToggleDrawer" aria-label="Toggle text direction" title="Toggle RTL"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></button>
+          <button class="theme-toggle" id="themeToggleDrawer" aria-label="Toggle theme" title="Toggle Theme"><svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+        </div>
         <a href="login.html" class="nav-login-btn">Login</a>
       </div>
     </div>
@@ -95,45 +104,255 @@
           <p class="lead-text">Discover how different areas of the foot correspond to organs and systems in your body. Click a point to learn more.</p>
         </div>
         <div class="pressure-map-grid reveal">
-          <div class="pressure-map-container">
-            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Foot reflexology reference with pressure point areas" loading="lazy">
-            <!-- Pressure points positioned over the image -->
-            <button class="pressure-point active" data-target="point-head" style="inset-block-start: 15%; inset-inline-start: 45%;" aria-label="Head & Brain area"></button>
-            <button class="pressure-point" data-target="point-sinus" style="inset-block-start: 25%; inset-inline-start: 30%;" aria-label="Sinus area"></button>
-            <button class="pressure-point" data-target="point-heart" style="inset-block-start: 40%; inset-inline-start: 65%;" aria-label="Heart area"></button>
-            <button class="pressure-point" data-target="point-stomach" style="inset-block-start: 55%; inset-inline-start: 45%;" aria-label="Stomach area"></button>
-            <button class="pressure-point" data-target="point-spine" style="inset-block-start: 70%; inset-inline-start: 25%;" aria-label="Spine area"></button>
+          <!-- Left: Interactive Reflexology Map Card -->
+          <div class="pressure-map-container card">
+            <div class="map-card-header">
+              <span class="map-badge"><span class="pulse-dot"></span> Interactive Anatomical Map</span>
+              <span class="map-hint">Tap points to explore</span>
+            </div>
+            
+            <div class="map-visual-wrapper">
+              <img src="assets/images/foot-reflexology-map.jpg" alt="Illustrated botanical reflexology chart showing anatomical foot reflex points and meridian zones" loading="lazy">
+              
+              <!-- Hotspot points positioned over the anatomical chart -->
+              <button class="pressure-point active" data-target="point-head" style="top: 29%; left: 43%;" aria-label="Head & Brain area" data-index="1">
+                <span class="point-number">1</span>
+                <span class="point-glow"></span>
+              </button>
+              <button class="pressure-point" data-target="point-sinus" style="top: 33%; left: 26%;" aria-label="Sinuses & Nasal Passages area" data-index="2">
+                <span class="point-number">2</span>
+                <span class="point-glow"></span>
+              </button>
+              <button class="pressure-point" data-target="point-heart" style="top: 43%; left: 41%;" aria-label="Heart & Chest area" data-index="3">
+                <span class="point-number">3</span>
+                <span class="point-glow"></span>
+              </button>
+              <button class="pressure-point" data-target="point-stomach" style="top: 53%; left: 38%;" aria-label="Stomach & Digestive System area" data-index="4">
+                <span class="point-number">4</span>
+                <span class="point-glow"></span>
+              </button>
+              <button class="pressure-point" data-target="point-spine" style="top: 50%; left: 21%;" aria-label="Spine & Lower Back area" data-index="5">
+                <span class="point-number">5</span>
+                <span class="point-glow"></span>
+              </button>
+            </div>
+
+            <div class="map-card-footer">
+              <div class="map-legend-item">
+                <span class="legend-indicator active"></span>
+                <span>Active Point</span>
+              </div>
+              <div class="map-legend-item">
+                <span class="legend-indicator"></span>
+                <span>Selectable Zone</span>
+              </div>
+            </div>
           </div>
-          <div class="pressure-info-container">
+
+          <!-- Right: Information & Action Card -->
+          <div class="pressure-info-container card">
+            <!-- Zone Navigation Pills -->
+            <div class="pressure-points-nav" role="tablist" aria-label="Reflexology point selector">
+              <button class="point-pill active" data-target="point-head" role="tab" aria-selected="true">
+                <span class="pill-number">01</span>
+                <span class="pill-title">Head & Brain</span>
+              </button>
+              <button class="point-pill" data-target="point-sinus" role="tab" aria-selected="false">
+                <span class="pill-number">02</span>
+                <span class="pill-title">Sinuses</span>
+              </button>
+              <button class="point-pill" data-target="point-heart" role="tab" aria-selected="false">
+                <span class="pill-number">03</span>
+                <span class="pill-title">Heart & Chest</span>
+              </button>
+              <button class="point-pill" data-target="point-stomach" role="tab" aria-selected="false">
+                <span class="pill-number">04</span>
+                <span class="pill-title">Digestive</span>
+              </button>
+              <button class="point-pill" data-target="point-spine" role="tab" aria-selected="false">
+                <span class="pill-number">05</span>
+                <span class="pill-title">Spine & Back</span>
+              </button>
+            </div>
+
+            <!-- Point 01: Head & Brain -->
             <div class="pressure-info active" id="point-head">
-              <span class="section-label">Point 01</span>
-              <h3>Head & Brain</h3>
-              <p>The tips of the toes correspond to the head and brain. Applying gentle pressure here can help relieve headaches, improve mental clarity, and reduce stress. This is often the starting point of a full reflexology session.</p>
-              <p>Regular stimulation of these points has been shown to improve sleep quality and reduce symptoms of anxiety.</p>
+              <div class="pressure-info-header">
+                <span class="section-label">Reflex Zone 01 &bull; Cranial & Neurological</span>
+                <h3>Head & Brain</h3>
+              </div>
+              <p class="pressure-info-desc">The tips of the toes correspond directly to the cranial sphere and brain cortex. Applying precise thumb-walking pressure here stimulates neural pathways, clears mental fatigue, and releases deep cognitive tension.</p>
+              
+              <div class="pressure-benefits">
+                <h4 class="benefits-title">Therapeutic Benefits</h4>
+                <ul class="benefits-list">
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Relieves acute tension headaches, migraines & digital eye strain</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Enhances cognitive clarity, focus & alpha-wave brain relaxation</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Supports circadian rhythm balance for deeper, more restorative sleep</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pressure-treatment-card">
+                <div class="treatment-meta">
+                  <span class="treatment-badge">Recommended Treatment</span>
+                  <h5 class="treatment-name">Cranial Harmony & Sole Ritual</h5>
+                  <p class="treatment-sub">60 min &bull; Warm herbal compress & targeted toe pressure</p>
+                </div>
+                <a href="booking.html" class="btn btn-sm btn-primary">Book This Ritual</a>
+              </div>
             </div>
+
+            <!-- Point 02: Sinus -->
             <div class="pressure-info" id="point-sinus">
-              <span class="section-label">Point 02</span>
-              <h3>Sinus & Nasal Passages</h3>
-              <p>The base of the toes relates to the sinuses and nasal passages. Targeted pressure in this area helps clear congestion, improve breathing, and relieve sinus headaches naturally.</p>
-              <p>This technique is particularly beneficial during allergy seasons and cold weather months.</p>
+              <div class="pressure-info-header">
+                <span class="section-label">Reflex Zone 02 &bull; Respiratory & Craniofacial</span>
+                <h3>Sinus & Nasal Passages</h3>
+              </div>
+              <p class="pressure-info-desc">The base and undersides of the toes relate to the sinus cavities and upper respiratory system. Targeted gentle acupressure promotes lymphatic drainage, clears congestion, and eases facial sinus pressure.</p>
+              
+              <div class="pressure-benefits">
+                <h4 class="benefits-title">Therapeutic Benefits</h4>
+                <ul class="benefits-list">
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Clears nasal blockages, seasonal allergies & sinus congestion</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Promotes full, effortless diaphragmatic breathing patterns</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Eases atmospheric and weather-induced frontal headaches</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pressure-treatment-card">
+                <div class="treatment-meta">
+                  <span class="treatment-badge">Recommended Treatment</span>
+                  <h5 class="treatment-name">Eucalyptus Breathe Reflexology</h5>
+                  <p class="treatment-sub">45 min &bull; Pure eucalyptus balm & sinus point stimulation</p>
+                </div>
+                <a href="booking.html" class="btn btn-sm btn-primary">Book This Ritual</a>
+              </div>
             </div>
+
+            <!-- Point 03: Heart & Chest -->
             <div class="pressure-info" id="point-heart">
-              <span class="section-label">Point 03</span>
-              <h3>Heart & Chest</h3>
-              <p>Located in the ball of the foot, this reflex area is connected to the heart and chest. Gentle stimulation can promote cardiovascular health, improve blood circulation, and ease chest tension.</p>
-              <p>Our therapists use specialized techniques for this sensitive area to ensure comfort and effectiveness.</p>
+              <div class="pressure-info-header">
+                <span class="section-label">Reflex Zone 03 &bull; Cardiovascular & Thoracic</span>
+                <h3>Heart & Chest</h3>
+              </div>
+              <p class="pressure-info-desc">Located across the upper ball of the foot beneath the metatarsals, this reflex area communicates with the thoracic cavity, heart meridian, and lungs. Rhythmic stimulation releases deep chest tightness and encourages systemic circulation.</p>
+              
+              <div class="pressure-benefits">
+                <h4 class="benefits-title">Therapeutic Benefits</h4>
+                <ul class="benefits-list">
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Promotes heart rate variability and deep emotional calming</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Enhances micro-circulation and whole-body oxygenation</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Releases tightness held in the chest and shoulder blades</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pressure-treatment-card">
+                <div class="treatment-meta">
+                  <span class="treatment-badge">Recommended Treatment</span>
+                  <h5 class="treatment-name">Deep Circulation & Vitality Therapy</h5>
+                  <p class="treatment-sub">75 min &bull; Rose essence & thoracic reflexology</p>
+                </div>
+                <a href="booking.html" class="btn btn-sm btn-primary">Book This Ritual</a>
+              </div>
             </div>
+
+            <!-- Point 04: Stomach & Digestive System -->
             <div class="pressure-info" id="point-stomach">
-              <span class="section-label">Point 04</span>
-              <h3>Stomach & Digestive System</h3>
-              <p>The arch of the foot maps to the digestive system. Reflexology on this area aids digestion, reduces bloating, and can help alleviate symptoms of indigestion and nausea.</p>
-              <p>Many clients report improved digestive health after just a few sessions focused on this area.</p>
+              <div class="pressure-info-header">
+                <span class="section-label">Reflex Zone 04 &bull; Gastrointestinal & Metabolic</span>
+                <h3>Stomach & Digestive System</h3>
+              </div>
+              <p class="pressure-info-desc">The central arch of the plantar surface maps directly to the stomach, pancreas, and gastrointestinal organs. Gentle circular pressure calms enteric nerves, aids natural digestive motility, and eases gut discomfort.</p>
+              
+              <div class="pressure-benefits">
+                <h4 class="benefits-title">Therapeutic Benefits</h4>
+                <ul class="benefits-list">
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Soothes chronic bloating, sluggish digestion & metabolic sluggishness</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Balances digestive acidity and eases abdominal tension</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Relieves gut sensitivity triggered by stress and daily anxiety</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pressure-treatment-card">
+                <div class="treatment-meta">
+                  <span class="treatment-badge">Recommended Treatment</span>
+                  <h5 class="treatment-name">Digestive Balance & Warm Stone Ritual</h5>
+                  <p class="treatment-sub">60 min &bull; Ginger-infused oils & basalt arch warming</p>
+                </div>
+                <a href="booking.html" class="btn btn-sm btn-primary">Book This Ritual</a>
+              </div>
             </div>
+
+            <!-- Point 05: Spine & Lower Back -->
             <div class="pressure-info" id="point-spine">
-              <span class="section-label">Point 05</span>
-              <h3>Spine & Lower Back</h3>
-              <p>The inner edge of the foot corresponds to the spine. Working these points helps relieve back pain, improve posture, and release tension stored in the spinal column.</p>
-              <p>This is one of the most requested treatments among office workers and those with sedentary lifestyles.</p>
+              <div class="pressure-info-header">
+                <span class="section-label">Reflex Zone 05 &bull; Musculoskeletal & Vertebral</span>
+                <h3>Spine & Lower Back</h3>
+              </div>
+              <p class="pressure-info-desc">The long medial edge of the foot corresponds directly to the cervical, thoracic, lumbar, and sacral spine. Sustained firm thumb-walking along this arch relieves postural tension and decompresses the spinal column.</p>
+              
+              <div class="pressure-benefits">
+                <h4 class="benefits-title">Therapeutic Benefits</h4>
+                <ul class="benefits-list">
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Alleviates lumbar stiffness, sciatica discomfort & lower back aches</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Releases postural fatigue caused by prolonged sitting or standing</span>
+                  </li>
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    <span>Restores natural spinal energy flow and muscular symmetry</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pressure-treatment-card">
+                <div class="treatment-meta">
+                  <span class="treatment-badge">Recommended Treatment</span>
+                  <h5 class="treatment-name">Spinal Realignment & Heel Therapy</h5>
+                  <p class="treatment-sub">60 min &bull; Peppermint arnica salve & medial edge acupressure</p>
+                </div>
+                <a href="booking.html" class="btn btn-sm btn-primary">Book This Ritual</a>
+              </div>
             </div>
           </div>
         </div>
@@ -390,17 +609,21 @@
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
             <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
         </div>
-        <div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-column"><h4>Our Services</h4><ul class="footer-links"><li><a href="services.html">Foot Reflexology</a></li><li><a href="services.html">Hot Stone Therapy</a></li><li><a href="services.html">Aromatherapy Soak</a></li><li><a href="services.html">Thai Foot Massage</a></li><li><a href="services.html">Couples Sessions</a></li></ul></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Our Services</h4><ul class="footer-links"><li><a href="treatments.html">Foot Reflexology</a></li><li><a href="treatments.html">Hot Stone Therapy</a></li><li><a href="treatments.html">Aromatherapy Soak</a></li><li><a href="treatments.html">Thai Foot Massage</a></li><li><a href="treatments.html">Couples Sessions</a></li></ul></div>
         <div class="footer-column"><h4>Contact Info</h4><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><p>128 Serenity Lane<br>Kyoto District, CA 90210</p></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><p>+1 (555) 234-5678</p></div><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><p>hello@soleharmony.com</p></div></div>
       </div>
       <div class="footer-bottom"><p>&copy; 2026 Sole Harmony. All rights reserved.</p></div>
     </div>
   </footer>
+
+  <!-- ═══ BACK TO TOP ═══ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
 </body>
 </html>

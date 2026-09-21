@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatments & Therapies — Sole Harmony Reflexology</title>
+  <meta name="description" content="Discover our complete menu of reflexology treatments, heated stone therapies, herbal foot soaks, and holistic couples rituals at Sole Harmony. Book online.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#5B7153">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Sole Harmony Home">
+        <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M18 6c-2 4-6 7-6 12a6 6 0 0 0 12 0c0-5-4-8-6-12z" fill="currentColor" opacity="0.25"/>
+          <path d="M18 10c-1.5 3-4 5.5-4 9a4 4 0 0 0 8 0c0-3.5-2.5-6-4-9z" fill="currentColor" opacity="0.5"/>
+        </svg>
+        <span>Sole Harmony</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="treatments.html" class="nav-link active">Treatments</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="rtl-toggle" id="rtlToggle" aria-label="Toggle text direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a href="login.html" class="nav-login-btn">Login</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ MOBILE DRAWER ═══ -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-content">
+      <ul class="drawer-menu">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="home2.html" class="drawer-link">Home 2</a></li>
+        <li><a href="about.html" class="drawer-link">About Us</a></li>
+        <li><a href="services.html" class="drawer-link">Services</a></li>
+        <li><a href="treatments.html" class="drawer-link active">Treatments</a></li>
+        <li><a href="blog.html" class="drawer-link">Blog</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+      <div class="drawer-actions">
+        <div class="drawer-toggles">
+          <button class="rtl-toggle" id="rtlToggleDrawer" aria-label="Toggle text direction" title="Toggle RTL">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+          </button>
+          <button class="theme-toggle" id="themeToggleDrawer" aria-label="Toggle theme" title="Toggle Theme">
+            <svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+        </div>
+        <a href="login.html" class="nav-login-btn">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ═══ PAGE HEADER ═══ -->
+    <section class="page-header" aria-label="Treatments header">
+      <div class="zen-dots"></div>
+      <div class="container">
+        <h1>Our Treatments</h1>
+        <p class="lead-text">Centuries-old reflexology disciplines, soothing botanical foot baths, and targeted healing modalities crafted to awaken your body's innate vitality.</p>
+      </div>
+    </section>
+
+    <!-- ═══ TREATMENTS MENU WITH TABS ═══ -->
+    <section class="section" id="treatment-menu" aria-label="Treatment menu">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Therapeutic Modalities</span>
+          <h2>Explore Our Healing Menu</h2>
+          <p class="lead-text">Every treatment begins with a brief consultation and warm herbal foot soak to prepare your body for deep restorative touch.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="tabs treatments-filter reveal">
+          <button class="tab-btn active" data-tab="tab-all">All Treatments</button>
+          <button class="tab-btn" data-tab="tab-reflexology">Reflexology</button>
+          <button class="tab-btn" data-tab="tab-massage">Massage</button>
+          <button class="tab-btn" data-tab="tab-holistic">Holistic</button>
+          <button class="tab-btn" data-tab="tab-couples">Couples</button>
+        </div>
+
+        <!-- ── TAB: ALL TREATMENTS ── -->
+        <div class="tab-panel active" id="tab-all">
+          <div class="card-grid card-grid-3">
+
+            <!-- Card 1 -->
+            <article class="card treatment-card reveal">
+              <span class="treatment-badge">Signature</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Classic foot reflexology session" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Classic Reflexology</h3>
+                  <span class="treatment-price-tag">$85</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 60 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Moderate Pressure</span>
+                </div>
+                <p>Comprehensive reflex zone stimulation on both feet to release stored tension, support organ balance, and induce full-body calmness.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Stress Relief</span>
+                  <span class="treatment-tag">Circulation</span>
+                  <span class="treatment-tag">Whole Body</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card treatment-card reveal">
+              <span class="treatment-badge">Warmth Therapy</span>
+              <div class="treatment-card-img">
+                <img src="https://i.pinimg.com/1200x/83/33/36/83333679e0c26afaf4f3cadc846520aa.jpg" alt="Hot stone therapy session" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Hot Stone Therapy</h3>
+                  <span class="treatment-price-tag">$95</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 75 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Gentle Heat</span>
+                </div>
+                <p>Smooth heated basalt stones glide across pressure meridians, expanding blood vessels and melting deep muscle stiffness in feet and calves.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Deep Relaxation</span>
+                  <span class="treatment-tag">Heat Therapy</span>
+                  <span class="treatment-tag">Muscle Soothing</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card treatment-card reveal">
+              <span class="treatment-badge">Botanical Soak</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80" alt="Aromatherapy foot soak" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Aroma Herbal Soak</h3>
+                  <span class="treatment-price-tag">$55</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Gentle Care</span>
+                </div>
+                <p>Infusion foot bath with Dead Sea salts, lavender, eucalyptus, and restorative herbs. Gently purifies, softens skin, and eases tired feet.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Detoxification</span>
+                  <span class="treatment-tag">Essential Oils</span>
+                  <span class="treatment-tag">Foot Recovery</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card treatment-card reveal">
+              <span class="treatment-badge">Ancient Art</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Thai foot massage" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Thai Foot Massage</h3>
+                  <span class="treatment-price-tag">$90</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 60 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Firm & Energizing</span>
+                </div>
+                <p>Ancient Thai method using wooden acupressure instruments along sen energy lines of lower legs and feet. Invigorates circulation and vitality.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Energy Flow</span>
+                  <span class="treatment-tag">Acupressure</span>
+                  <span class="treatment-tag">Leg Relief</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="card treatment-card reveal">
+              <span class="treatment-badge">Chronic Relief</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Deep tissue reflexology" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Deep Tissue Reflex</h3>
+                  <span class="treatment-price-tag">$110</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 75 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Deep Pressure</span>
+                </div>
+                <p>Targeted therapeutic pressure targeting plantar fascia tightness, chronic heel discomfort, and stubborn connective tissue restrictions.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Pain Relief</span>
+                  <span class="treatment-tag">Plantar Fascia</span>
+                  <span class="treatment-tag">Deep Work</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="card treatment-card reveal">
+              <span class="treatment-badge">Energy Balance</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&q=80" alt="Meridian balancing session" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Meridian Balancing</h3>
+                  <span class="treatment-price-tag">$120</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Balanced Touch</span>
+                </div>
+                <p>Harmonizes the 12 primary meridian pathways through gentle rhythmic stimulation, clearing blockages and calming the central nervous system.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Qi Energy</span>
+                  <span class="treatment-tag">Nervous System</span>
+                  <span class="treatment-tag">Restorative</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ── TAB: REFLEXOLOGY ── -->
+        <div class="tab-panel" id="tab-reflexology">
+          <div class="card-grid card-grid-3">
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Classic</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Classic foot reflexology session" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Classic Reflexology</h3>
+                  <span class="treatment-price-tag">$85</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 60 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Moderate Pressure</span>
+                </div>
+                <p>Traditional pressure-point therapy targeting all major reflex zones for full-body wellness and complete restoration.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Holistic Health</span>
+                  <span class="treatment-tag">Systemic Balance</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Deep Work</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Deep tissue reflexology treatment" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Deep Tissue Reflex</h3>
+                  <span class="treatment-price-tag">$110</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 75 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Firm Pressure</span>
+                </div>
+                <p>Intensive pressure applied to deep tissue reflex points for chronic tension, athletic fatigue, and arch tightness.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Targeted Relief</span>
+                  <span class="treatment-tag">Athletic Recovery</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Sensory</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80" alt="Aromatherapy reflexology with essential oils" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Aroma Reflexology</h3>
+                  <span class="treatment-price-tag">$130</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Calming Pressure</span>
+                </div>
+                <p>Combines custom botanical essential oil blends with delicate reflex zone activation for a rich sensory and emotional unwind.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Essential Oils</span>
+                  <span class="treatment-tag">Emotional Wellness</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ── TAB: MASSAGE ── -->
+        <div class="tab-panel" id="tab-massage">
+          <div class="card-grid card-grid-3">
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Hot Stones</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&q=80" alt="Hot stone foot massage therapy" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Hot Stone Foot Massage</h3>
+                  <span class="treatment-price-tag">$95</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 75 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Soothing Heat</span>
+                </div>
+                <p>Heated basalt stones glide smoothly across tension points, soothing stiff tendons and stimulating deeper vascular return.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Warmth Therapy</span>
+                  <span class="treatment-tag">Vascular Relief</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Traditional</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Thai foot massage treatment" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Thai Foot Massage</h3>
+                  <span class="treatment-price-tag">$90</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 60 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Firm & Dynamic</span>
+                </div>
+                <p>Centuries-old Thai stick technique to stimulate reflex lines along feet and calves. Dynamic, invigorating, and restorative.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Sen Lines</span>
+                  <span class="treatment-tag">Invigoration</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Gentle</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80" alt="Swedish foot relaxation massage" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Swedish Foot Relaxation</h3>
+                  <span class="treatment-price-tag">$75</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 60 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Gentle Flow</span>
+                </div>
+                <p>Gentle flowing effleurage strokes around ankles, soles, and toes. Perfect for stress reduction, light recovery, and improved sleep.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Gentle Touch</span>
+                  <span class="treatment-tag">Better Sleep</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ── TAB: HOLISTIC ── -->
+        <div class="tab-panel" id="tab-holistic">
+          <div class="card-grid card-grid-3">
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Detox</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80" alt="Herbal foot soak treatment" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Herbal Foot Soak</h3>
+                  <span class="treatment-price-tag">$55</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Botanical Bath</span>
+                </div>
+                <p>Warm wooden-barrel foot bath with Himalayan salt, fresh ginger, mugwort, and chamomile to stimulate lymphatic drainage.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Herbal Remedies</span>
+                  <span class="treatment-tag">Detox</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Acupressure</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&q=80" alt="Meridian energy balancing session" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Meridian Balancing</h3>
+                  <span class="treatment-price-tag">$120</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Energy Focus</span>
+                </div>
+                <p>Restores balance along acupuncture channels through targeted foot acupoint stimulation, releasing energetic stasis.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Eastern Medicine</span>
+                  <span class="treatment-tag">Holistic Harmony</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Ceremony</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80" alt="Wellness tea ceremony and reflexology" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Tea & Heal Ritual</h3>
+                  <span class="treatment-price-tag">$145</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Sensory Ritual</span>
+                </div>
+                <p>Begins with a private herbal tea tasting ritual, followed by a deeply restorative personalized foot reflexology session.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Tea Ceremony</span>
+                  <span class="treatment-tag">Mindfulness</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ── TAB: COUPLES ── -->
+        <div class="tab-panel" id="tab-couples">
+          <div class="card-grid card-grid-3">
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Side by Side</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Couples reflexology session" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Harmony for Two</h3>
+                  <span class="treatment-price-tag">$160</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 60 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> 2 Guests</span>
+                </div>
+                <p>Synchronized reflexology treatments in our tranquil couples sanctuary. Share soothing stillness with someone special.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Couples Suite</span>
+                  <span class="treatment-tag">Shared Stillness</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Candlelight Duo</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&q=80" alt="Couples hot stone therapy" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Stones & Serenity Duo</h3>
+                  <span class="treatment-price-tag">$220</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 Minutes</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> 2 Guests</span>
+                </div>
+                <p>Warm stone therapy for two in an ambient candlelit setting. Includes artisanal herbal tea and soothing aromatherapy.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Hot Stone</span>
+                  <span class="treatment-tag">Romantic Escape</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+            <article class="card treatment-card">
+              <span class="treatment-badge">Half-Day Retreat</span>
+              <div class="treatment-card-img">
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80" alt="Couples zen retreat package" loading="lazy">
+              </div>
+              <div class="treatment-card-body">
+                <div class="treatment-header-row">
+                  <h3>Zen Retreat Package</h3>
+                  <span class="treatment-price-tag">$380</span>
+                </div>
+                <div class="treatment-meta">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 Hours</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Total Immersion</span>
+                </div>
+                <p>Complete wellness journey: botanical foot bath, reflexology, hot stone therapy, private tea ceremony, and guided meditation.</p>
+                <div class="treatment-tags">
+                  <span class="treatment-tag">Full Day</span>
+                  <span class="treatment-tag">Luxury Retreat</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Treatment</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ WHAT TO EXPECT ═══ -->
+    <section class="section" style="background-color: var(--clr-bg-alt);" aria-label="Treatment preparation">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Your Visit</span>
+          <h2>Preparing For Your Treatment</h2>
+          <p class="lead-text">A few thoughtful recommendations to make your healing experience seamless and deeply restorative.</p>
+        </div>
+
+        <div class="process-steps reveal">
+          <div class="process-step">
+            <h4>Arrive Calmly</h4>
+            <p>We invite you to arrive 10-15 minutes early to silence devices and begin grounding with warm organic tea.</p>
+          </div>
+          <div class="process-step">
+            <h4>Comfortable Attire</h4>
+            <p>Wear loose pants or comfortable clothing that can be rolled easily past your knees and lower legs.</p>
+          </div>
+          <div class="process-step">
+            <h4>Voice Your Preference</h4>
+            <p>Tell your therapist your desired pressure level and any tender spots; your comfort is always our first priority.</p>
+          </div>
+          <div class="process-step">
+            <h4>Post-Treatment Rest</h4>
+            <p>Drink plenty of fresh water following your session to support natural circulation and toxin elimination.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TREATMENT FAQ ═══ -->
+    <section class="section" aria-label="Treatment FAQ">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Questions & Answers</span>
+          <h2>Frequently Asked Questions</h2>
+          <p class="lead-text">Learn more about reflexology, session expectations, and how we cater to your specific well-being.</p>
+        </div>
+
+        <div class="treatment-faq-grid reveal">
+          <div class="treatment-faq-item">
+            <h4>How does reflexology differ from regular foot massage?</h4>
+            <p>While traditional foot massage focuses primarily on muscle relaxation, reflexology targets precise reflex points mapped to corresponding organs, glands, and biological systems throughout the whole body.</p>
+          </div>
+
+          <div class="treatment-faq-item">
+            <h4>Is reflexology painful or ticklish?</h4>
+            <p>Reflexology uses firm, grounded thumb-and-finger pressure rather than light strokes, preventing ticklish sensations. If any point feels tender, let your practitioner know and pressure will be customized.</p>
+          </div>
+
+          <div class="treatment-faq-item">
+            <h4>Can reflexology help with plantar fasciitis?</h4>
+            <p>Yes. Our Deep Tissue Reflex and Meridian Balancing sessions are designed to gently release tension in the plantar fascia tendon, calf muscles, and Achilles tendon, significantly alleviating daily discomfort.</p>
+          </div>
+
+          <div class="treatment-faq-item">
+            <h4>How often should I receive treatments?</h4>
+            <p>For chronic stress or pain management, an initial series of weekly sessions produces wonderful cumulative results. For ongoing wellness and balance maintenance, bi-weekly or monthly sessions are ideal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA SECTION ═══ -->
+    <section class="cta-section" aria-label="Book treatment consultation">
+      <div class="zen-dots"></div>
+      <div class="container cta-content reveal">
+        <span class="section-label" style="color: var(--clr-accent-light);">Begin Your Renewal</span>
+        <h2>Ready for Restoration?</h2>
+        <p>Book your personalized treatment today or consult with our master reflexologists to tailor a session for your needs.</p>
+        <a href="contact.html" class="btn btn-accent btn-cta">Reserve Your Treatment</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M18 6c-2 4-6 7-6 12a6 6 0 0 0 12 0c0-5-4-8-6-12z" fill="currentColor" opacity="0.25"/>
+              <path d="M18 10c-1.5 3-4 5.5-4 9a4 4 0 0 0 8 0c0-3.5-2.5-6-4-9z" fill="currentColor" opacity="0.5"/>
+            </svg>
+            <span>Sole Harmony</span>
+          </a>
+          <p>A sanctuary of reflexology and natural healing, dedicated to restoring your body's balance through the ancient art of foot therapy.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="treatments.html">Foot Reflexology</a></li>
+            <li><a href="treatments.html">Hot Stone Therapy</a></li>
+            <li><a href="treatments.html">Aromatherapy Soak</a></li>
+            <li><a href="treatments.html">Thai Foot Massage</a></li>
+            <li><a href="treatments.html">Couples Sessions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>128 Serenity Lane<br>Kyoto District, CA 90210</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <p>+1 (555) 234-5678</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <p>hello@soleharmony.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sole Harmony. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ BACK TO TOP ═══ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+</body>
+</html>

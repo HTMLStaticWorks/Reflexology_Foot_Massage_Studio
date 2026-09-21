@@ -17,19 +17,33 @@
 /* Hamburger icon does not need flipping */
 
 /* Timeline adjustments for RTL */
-[dir="rtl"] .timeline {
-  padding-inline-start: 0;
-  padding-inline-end: var(--space-9);
+[dir="rtl"] .timeline,
+.rtl .timeline {
+  padding-inline-start: var(--space-9);
+  padding-inline-end: 0;
+  padding-left: 0;
+  padding-right: var(--space-9);
 }
 
-[dir="rtl"] .timeline::before {
-  inset-inline-start: auto;
-  inset-inline-end: 24px;
+[dir="rtl"] .timeline::before,
+.rtl .timeline::before {
+  inset-inline-start: 24px;
+  inset-inline-end: auto;
+  left: auto;
+  right: 24px;
 }
 
-[dir="rtl"] .timeline-dot {
-  inset-inline-start: auto;
-  inset-inline-end: calc(-1 * var(--space-9) + 16px);
+[dir="rtl"] .timeline-dot,
+.rtl .timeline-dot {
+  inset-inline-start: calc(-1 * var(--space-9) + 16px);
+  inset-inline-end: auto;
+  left: auto;
+  right: calc(-1 * var(--space-9) + 16px);
+}
+
+[dir="rtl"] .timeline-item,
+.rtl .timeline-item {
+  text-align: right;
 }
 
 /* Blog single content adjustments */
@@ -77,7 +91,9 @@
 [dir="rtl"] .about-content h2,
 [dir="rtl"] .about-content .section-label,
 [dir="rtl"] .contact-info-card,
-[dir="rtl"] .pressure-info .section-label {
+[dir="rtl"] .pressure-info .section-label,
+[dir="rtl"] .faq-dropdown-summary h4,
+[dir="rtl"] .faq-dropdown-content p {
   text-align: start;
 }
 
@@ -87,3 +103,13 @@
     text-align: center;
   }
 }
+
+/* Auth top bar back link in RTL */
+[dir="rtl"] .auth-back-link svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .auth-back-link:hover {
+  transform: translateX(2px);
+}
+

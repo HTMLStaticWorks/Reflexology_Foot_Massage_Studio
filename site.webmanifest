@@ -1,0 +1,19 @@
+{
+  "name": "Sole Harmony — Reflexology & Foot Massage Studio",
+  "short_name": "Sole Harmony",
+  "icons": [
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#5B7153",
+  "background_color": "#FAF6F1",
+  "display": "standalone"
+}
