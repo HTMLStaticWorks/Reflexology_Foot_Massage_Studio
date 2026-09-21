@@ -1,0 +1,89 @@
+/* ═══════════════════════════════════════════════════════════════
+   SOLE HARMONY — RTL Overrides
+   Applied when dir="rtl" on <html> or .rtl on <body>
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Drawer slides from LEFT in RTL */
+[dir="rtl"] .drawer-content {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .mobile-drawer.open .drawer-content {
+  transform: translateX(0);
+}
+
+/* Hamburger icon does not need flipping */
+
+/* Timeline adjustments for RTL */
+[dir="rtl"] .timeline {
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-9);
+}
+
+[dir="rtl"] .timeline::before {
+  inset-inline-start: auto;
+  inset-inline-end: 24px;
+}
+
+[dir="rtl"] .timeline-dot {
+  inset-inline-start: auto;
+  inset-inline-end: calc(-1 * var(--space-9) + 16px);
+}
+
+/* Blog single content adjustments */
+[dir="rtl"] .blog-single-content blockquote {
+  border-inline-start: none;
+  border-inline-end: 4px solid var(--clr-accent);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+/* Read more arrow flip */
+[dir="rtl"] .read-more-link svg {
+  transform: scaleX(-1);
+}
+
+/* Breadcrumb chevron flip */
+[dir="rtl"] .breadcrumbs svg {
+  transform: scaleX(-1);
+}
+
+/* Hero split image accent */
+[dir="rtl"] .hero-split-image::after {
+  transform: translate(-12px, 12px);
+}
+
+/* Nav link active indicator stays correct via logical props */
+
+/* Carousel button arrows */
+[dir="rtl"] .carousel-btn svg {
+  transform: scaleX(-1);
+}
+
+/* Password toggle position already uses logical props */
+
+/* About image accent */
+[dir="rtl"] .about-image-accent {
+  inset-inline-start: auto;
+  inset-inline-end: -16px;
+}
+
+/* Process steps arrow connector flip (if added) */
+
+/* Ensure text alignment is natural in RTL */
+[dir="rtl"] .blog-card-body,
+[dir="rtl"] .mission-card,
+[dir="rtl"] .about-content h2,
+[dir="rtl"] .about-content .section-label,
+[dir="rtl"] .contact-info-card,
+[dir="rtl"] .pressure-info .section-label {
+  text-align: start;
+}
+
+/* Footer RTL centering on mobile */
+@media (max-width: 768px) {
+  [dir="rtl"] .footer-grid {
+    text-align: center;
+  }
+}

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sole Harmony — Reflexology & Foot Massage Studio</title>
+  <meta name="description" content="Experience tranquility and natural healing at Sole Harmony. Premium reflexology, foot massage, and holistic wellness treatments tailored to restore your balance.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Sole Harmony",
+    "description": "Premium reflexology and foot massage studio dedicated to natural healing and holistic wellness.",
+    "url": "#",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80",
+    "priceRange": "$$",
+    "servesCuisine": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "128 Serenity Lane",
+      "addressLocality": "Kyoto District",
+      "addressRegion": "CA",
+      "postalCode": "90210"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Sole Harmony Home">
+        <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M18 6c-2 4-6 7-6 12a6 6 0 0 0 12 0c0-5-4-8-6-12z" fill="currentColor" opacity="0.25"/>
+          <path d="M18 10c-1.5 3-4 5.5-4 9a4 4 0 0 0 8 0c0-3.5-2.5-6-4-9z" fill="currentColor" opacity="0.5"/>
+        </svg>
+        <span>Sole Harmony</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="services.html#treatments" class="nav-link">Treatments</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="rtl-toggle" id="rtlToggle" aria-label="Toggle text direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a href="login.html" class="nav-login-btn">Login</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ MOBILE DRAWER ═══ -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-content">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <ul class="drawer-menu">
+        <li><a href="index.html" class="drawer-link active">Home</a></li>
+        <li><a href="home2.html" class="drawer-link">Home 2</a></li>
+        <li><a href="about.html" class="drawer-link">About Us</a></li>
+        <li><a href="services.html" class="drawer-link">Services</a></li>
+        <li><a href="services.html#treatments" class="drawer-link">Treatments</a></li>
+        <li><a href="blog.html" class="drawer-link">Blog</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+      <div class="drawer-actions">
+        <button class="rtl-toggle" id="rtlToggleDrawer" aria-label="Toggle text direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+          <span>Toggle RTL</span>
+        </button>
+        <button class="theme-toggle" id="themeToggleDrawer" aria-label="Toggle theme">
+          <svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span class="theme-label">Toggle Theme</span>
+        </button>
+        <a href="login.html" class="nav-login-btn">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="hero" aria-label="Welcome">
+      <div class="hero-bg" data-parallax>
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80" alt="Serene spa setting with warm candles and natural elements" loading="eager">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="floating-shape floating-shape-1"></div>
+      <div class="floating-shape floating-shape-2"></div>
+      <div class="container hero-content">
+        <span class="section-label hero-anim-fade" style="color: var(--clr-accent-light);">Welcome to Sole Harmony</span>
+        <h1 class="hero-anim-fade">Rediscover Balance<br>Through Your Feet</h1>
+        <p class="lead-text hero-anim-fade">Ancient reflexology wisdom meets modern wellness in a tranquil sanctuary designed to restore your body's natural harmony and inner peace.</p>
+        <div class="hero-actions hero-anim-fade">
+          <a href="services.html" class="btn btn-primary btn-cta">Book Your Session</a>
+          <a href="about.html" class="btn btn-secondary">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WAVE DIVIDER ═══ -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="var(--clr-bg)"/>
+      </svg>
+    </div>
+
+    <!-- ═══ SERVICES SECTION ═══ -->
+    <section class="section" id="services" aria-label="Our services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What We Offer</span>
+          <h2>Holistic Healing Treatments</h2>
+          <p class="lead-text">Each treatment is thoughtfully crafted to address your unique needs, blending ancient techniques with modern understanding of the body.</p>
+        </div>
+        <div class="card-grid card-grid-3">
+          <article class="card service-card reveal">
+            <div class="service-card-img">
+              <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Professional foot reflexology treatment" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3>Foot Reflexology</h3>
+              <p>Targeted pressure point therapy on the feet to stimulate healing responses throughout the body and restore natural energy flow.</p>
+              <a href="services.html" class="btn btn-secondary">Learn More</a>
+            </div>
+          </article>
+          <article class="card service-card reveal">
+            <div class="service-card-img">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&q=80" alt="Hot stone massage therapy with smooth basalt stones" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3>Hot Stone Therapy</h3>
+              <p>Heated basalt stones placed on key energy points to melt away tension, improve circulation, and bring deep relaxation to body and mind.</p>
+              <a href="services.html" class="btn btn-secondary">Learn More</a>
+            </div>
+          </article>
+          <article class="card service-card reveal">
+            <div class="service-card-img">
+              <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80" alt="Aromatherapy essential oils and botanical elements" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3>Aromatherapy Foot Soak</h3>
+              <p>A luxurious blend of essential oils and herbal infusions in a warm foot bath, designed to cleanse, soothe, and revitalize tired feet.</p>
+              <a href="services.html" class="btn btn-secondary">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT PREVIEW ═══ -->
+    <section class="section" aria-label="About Sole Harmony">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80" alt="Calm interior of Sole Harmony studio with natural wood and plants" loading="lazy">
+            <div class="about-image-accent"></div>
+          </div>
+          <div class="about-content reveal">
+            <span class="section-label">Our Philosophy</span>
+            <h2>Where Ancient Wisdom Meets Modern Care</h2>
+            <p>Founded on the belief that true wellness begins from the ground up, Sole Harmony offers an intimate retreat where every treatment is a journey toward balance. Our practitioners draw from thousands of years of reflexology tradition, refined with contemporary anatomical knowledge.</p>
+            <p>We believe the feet are a mirror of the body — each pressure point a gateway to deeper healing. In our serene space, surrounded by natural elements and calming energy, you'll find more than a treatment — you'll find restoration.</p>
+            <div class="about-stats">
+              <div class="about-stat">
+                <h3>12+</h3>
+                <p>Years of Practice</p>
+              </div>
+              <div class="about-stat">
+                <h3>8K+</h3>
+                <p>Happy Clients</p>
+              </div>
+              <div class="about-stat">
+                <h3>15</h3>
+                <p>Certified Therapists</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WAVE DIVIDER ═══ -->
+    <div class="section-divider flip">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,50 1440,40 L1440,80 L0,80 Z" fill="var(--clr-bg-alt)"/>
+      </svg>
+    </div>
+
+    <!-- ═══ FEATURES / HIGHLIGHTS ═══ -->
+    <section class="section features-section" aria-label="Why choose us">
+      <div class="zen-dots"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Why Sole Harmony</span>
+          <h2>The Difference You'll Feel</h2>
+          <p class="lead-text">Every detail of our studio is designed with your comfort, safety, and transformation in mind.</p>
+        </div>
+        <div class="card-grid card-grid-4 reveal">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5-.8 6.5A7 7 0 0 1 11 20z"/><path d="M11 20a7 7 0 0 0 1.2-13.1C6.5 4.9 5 3.5 5 3.5S3.5 6 5.8 10A7 7 0 0 0 11 20z"/></svg>
+            </div>
+            <h4>Natural Healing</h4>
+            <p>Chemical-free, holistic approach using only organic oils and traditional techniques.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <h4>Personalized Care</h4>
+            <p>Every session begins with a consultation to understand your body's unique needs.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h4>Certified Experts</h4>
+            <p>Our therapists hold international certifications in reflexology and wellness.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 6 4-4 4 4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg>
+            </div>
+            <h4>Serene Atmosphere</h4>
+            <p>A carefully designed sanctuary with natural textures, soft lighting, and calming music.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WAVE DIVIDER ═══ -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="var(--clr-bg)"/>
+      </svg>
+    </div>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="section" aria-label="Client testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Voices of Harmony</span>
+          <h2>What Our Clients Say</h2>
+          <p class="lead-text">Real stories from real people who found balance and relief through our care.</p>
+        </div>
+        <div class="carousel-wrapper reveal">
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <div class="card-grid card-grid-3">
+                <div class="card testimonial-card">
+                  <span class="testimonial-quote">"</span>
+                  <div class="testimonial-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="testimonial-text">After years of chronic foot pain, Sole Harmony changed everything. The reflexology sessions have been transformative — I walk with ease for the first time in years.</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Mitchell" loading="lazy">
+                    <div class="testimonial-author-info">
+                      <h4>Sarah Mitchell</h4>
+                      <span>Regular Client</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card testimonial-card">
+                  <span class="testimonial-quote">"</span>
+                  <div class="testimonial-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="testimonial-text">The atmosphere at Sole Harmony is unlike any place I've visited. From the moment you step in, you feel the stress melt away. Truly a hidden gem.</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="David Chen" loading="lazy">
+                    <div class="testimonial-author-info">
+                      <h4>David Chen</h4>
+                      <span>Wellness Enthusiast</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card testimonial-card">
+                  <span class="testimonial-quote">"</span>
+                  <div class="testimonial-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="testimonial-text">I booked a hot stone session on a whim and now I'm a monthly member. The therapists are incredibly skilled and genuinely caring. Highly recommend!</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emily Tanaka" loading="lazy">
+                    <div class="testimonial-author-info">
+                      <h4>Emily Tanaka</h4>
+                      <span>Monthly Member</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <div class="card-grid card-grid-3">
+                <div class="card testimonial-card">
+                  <span class="testimonial-quote">"</span>
+                  <div class="testimonial-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="testimonial-text">As an athlete, recovery is crucial. The reflexology sessions at Sole Harmony have become an essential part of my training routine. Outstanding results every time.</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Marcus Rivera" loading="lazy">
+                    <div class="testimonial-author-info">
+                      <h4>Marcus Rivera</h4>
+                      <span>Professional Athlete</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card testimonial-card">
+                  <span class="testimonial-quote">"</span>
+                  <div class="testimonial-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="testimonial-text">The most peaceful experience I've ever had. Their aromatherapy foot soak combined with reflexology is absolute heaven. A must-try for anyone.</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" alt="Lisa Wong" loading="lazy">
+                    <div class="testimonial-author-info">
+                      <h4>Lisa Wong</h4>
+                      <span>First-Time Visitor</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card testimonial-card">
+                  <span class="testimonial-quote">"</span>
+                  <div class="testimonial-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="testimonial-text">I gifted my mother a session here and she hasn't stopped talking about it. The staff is warm, the environment is immaculate, and the results speak for themselves.</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="James Park" loading="lazy">
+                    <div class="testimonial-author-info">
+                      <h4>James Park</h4>
+                      <span>Gift Buyer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn carousel-prev" aria-label="Previous testimonials">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="carousel-dots">
+              <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" aria-label="Go to slide 2"></button>
+            </div>
+            <button class="carousel-btn carousel-next" aria-label="Next testimonials">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA SECTION ═══ -->
+    <section class="cta-section" aria-label="Book now">
+      <div class="zen-dots"></div>
+      <div class="floating-shape floating-shape-3"></div>
+      <div class="container cta-content reveal">
+        <span class="section-label" style="color: var(--clr-accent-light);">Ready for Restoration?</span>
+        <h2>Begin Your Journey to Balance</h2>
+        <p>Step into serenity. Book your first reflexology session today and experience the transformative power of ancient healing arts.</p>
+        <a href="contact.html" class="btn btn-accent btn-cta">Book Your Session</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M18 6c-2 4-6 7-6 12a6 6 0 0 0 12 0c0-5-4-8-6-12z" fill="currentColor" opacity="0.25"/>
+              <path d="M18 10c-1.5 3-4 5.5-4 9a4 4 0 0 0 8 0c0-3.5-2.5-6-4-9z" fill="currentColor" opacity="0.5"/>
+            </svg>
+            <span>Sole Harmony</span>
+          </a>
+          <p>A sanctuary of reflexology and natural healing, dedicated to restoring your body's balance through the ancient art of foot therapy.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Foot Reflexology</a></li>
+            <li><a href="services.html">Hot Stone Therapy</a></li>
+            <li><a href="services.html">Aromatherapy Soak</a></li>
+            <li><a href="services.html">Thai Foot Massage</a></li>
+            <li><a href="services.html">Couples Sessions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>128 Serenity Lane<br>Kyoto District, CA 90210</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <p>+1 (555) 234-5678</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <p>hello@soleharmony.com</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>Mon–Sat: 9AM – 8PM<br>Sun: 10AM – 6PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sole Harmony. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
