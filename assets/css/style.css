@@ -137,6 +137,7 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   scroll-padding-block-start: var(--nav-height);
+  overflow-x: hidden;
 }
 
 body {
@@ -148,6 +149,7 @@ body {
   background-color: var(--clr-bg);
   transition: background-color var(--transition), color var(--transition);
   overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -725,6 +727,7 @@ strong {
   z-index: 999;
   pointer-events: none;
   visibility: hidden;
+  overflow: hidden;
 }
 
 .mobile-drawer.open {
@@ -1106,6 +1109,112 @@ strong {
 .hero-trust-sep {
   color: rgba(255, 255, 255, 0.35);
   font-size: 0.75rem;
+}
+
+/* Home 1 Hero Layout & Secondary Media */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-block-start: calc(var(--nav-height) + var(--space-6));
+  padding-block-end: var(--space-8);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.hero-layout .hero-content {
+  max-width: 740px;
+  padding-block-start: 0;
+}
+
+.hero-context-line {
+  max-width: 720px;
+  line-height: 1.65;
+  margin-block-end: var(--space-7);
+}
+
+.hero-secondary-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-secondary-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.22);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.hero-secondary-image-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.hero-secondary-img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-secondary-badge {
+  position: absolute;
+  inset-block-end: var(--space-4);
+  inset-inline-start: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0.65rem 1.1rem;
+  background: rgba(20, 24, 21, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--border-radius);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hero-secondary-badge .badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.hero-secondary-badge .badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-secondary-badge .badge-text strong {
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.hero-secondary-badge .badge-text span {
+  font-size: 0.75rem;
+  color: #E0D8CF;
+  line-height: 1.2;
 }
 
 /* Hero Animation Classes */
@@ -3962,6 +4071,21 @@ strong {
     display: flex;
   }
 
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .hero-secondary-card {
+    justify-content: flex-start;
+  }
+
+  .hero-secondary-image-wrapper {
+    max-width: 540px;
+    max-height: 320px;
+    aspect-ratio: 16 / 9;
+  }
+
   .hero-split {
     grid-template-columns: 1fr;
     gap: var(--space-7);
@@ -4074,8 +4198,24 @@ strong {
 
   .container,
   .container-narrow,
-  .container-wide {
+  .container-wide,
+  .nav-container {
     padding-inline: var(--space-4);
+  }
+
+  .hero-br {
+    display: none;
+  }
+
+  .hero-secondary-image-wrapper {
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
   }
 
   .section {
@@ -4241,8 +4381,20 @@ strong {
 
   .container,
   .container-narrow,
-  .container-wide {
+  .container-wide,
+  .nav-container {
     padding-inline: var(--space-3);
+  }
+
+  .nav-logo {
+    font-size: 1.35rem;
+    gap: var(--space-2);
+  }
+
+  .nav-logo svg,
+  .nav-logo-icon {
+    width: 28px;
+    height: 28px;
   }
 
   .drawer-content {
